@@ -238,7 +238,7 @@ router.post(
           port: 2525,
           auth: {
             user: "gupta95031p@gmail.com",
-            pass: "@avi1L/#&&123",
+            pass: "",
           },
         });
         let currentTime = new Date();
