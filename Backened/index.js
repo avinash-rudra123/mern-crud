@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 dotenv.config();
 const bodyparser = require("body-parser");
-const port = process.env.PORT || 4056;
+const port = process.env.PORT || 3056;
 mongoose.connect("mongodb://localhost:27017/rahul", {
   useUnifiedTopology: true,
 });
@@ -17,7 +17,7 @@ app.use(bodyparser.urlencoded({ extended: false }));
 app.use(bodyparser.json());
 app.use(cors({ credentials: true, origin: true }));
 app.options("*", cors());
-//app.use(PORT);
+
 app.use("/api", useroutes);
 app.use(express.json());
 app.listen(port, () => {
